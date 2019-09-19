@@ -60,7 +60,7 @@ class Game extends Component {
     const { grids } = this.state;
     for (const line of lines) {
       const [i, j, k] = line;
-      if (grids[i] === grids[j] && grids[j] === grids[k]) {
+      if (grids[i] !== 0 && grids[i] === grids[j] && grids[j] === grids[k]) {
         return grids[i];
       }
     }
